@@ -1,0 +1,29 @@
+
+Pinging 8.8.8.8 with 32 bytes of data:
+Reply from 8.8.8.8: bytes=32 time=94ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=95ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=91ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=93ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=94ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=93ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=91ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+Reply from 8.8.8.8: bytes=32 time=92ms TTL=42
+
+Ping statistics for 8.8.8.8:
+    Packets: Sent = 21, Received = 21, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 91ms, Maximum = 95ms, Average = 92ms
+Control-C

@@ -4,16 +4,13 @@ setlocal EnableDelayedExpansion
 rem Automate get git directory
 rem where /R C:\ sh.exe
 
-REM Git directory
-rem IF EXIST "%PROGRAMFILES(X86)%" (GOTO:64BIT) ELSE (GOTO:32BIT)
-rem 	:64BIT
-rem 	echo OS IS 64-BIT
-rem 	GOTO:END
+REM get Git directory
+rem for %i in (git.exe) do @echo. %~$PATH:i
+for %%i in (git.exe) do (
+	set git_path=%i%
+	)
 
-rem 	:32BIT
-rem 	echo OS IS 32-BIT
-rem 	GOTO:END
-rem :END
+echo %git_path%
 
 set git_bash_dir="C:\Program Files\Git\bin\sh.exe"
 set script_file_name=\bash_script.sh

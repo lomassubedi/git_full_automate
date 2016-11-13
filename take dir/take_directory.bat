@@ -25,7 +25,7 @@ set final_path=%cd%%script_file_name%
 
 rem Get drive letter with colon
 set drive=%final_path:~0,2%
-echo %drive%
+rem echo %drive%
 
 rem Copy path in DOS style 
 set unix_path=%final_path% 
@@ -37,7 +37,7 @@ rem convert DOS drive notation to unix style drive i.e. C: to /C/
 set unix_path=!unix_path:%drive%=%drive:~0,1%!
 
 rem Add quotation marks at the end
-set unix_path=^"^/%unix_path%^" 
+set unix_path=^"^/%unix_path%^" &rem append '"'
 
 rem discard white space at the end and manage to place "\ " instead of 
 rem white space present directory

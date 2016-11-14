@@ -39,12 +39,14 @@ set unix_path=!unix_path:%drive%=%drive:~0,1%!
 rem Add quotation marks at the end
 set unix_path=^"^/%unix_path%^" 
 
+rem ------------------------------------------
 rem discard white space at the end
 set unix_path=%unix_path: "="%
 
 rem set unix_path=%unix_path: =\ %
 
 rem set unix_path=%unix_path: =\ %
+rem -------------------------------------------
 echo %unix_path%
 
-%git_bash_dir% --login -i -c %unix_path%
+rem %git_bash_dir% --login -i -c %unix_path%

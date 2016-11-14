@@ -1,7 +1,9 @@
 @echo off
 setlocal EnableDelayedExpansion
 
+rem Local String variables
 set "sh_exe=bin\sh.exe"
+set "script_file_name=\bash_script.sh"
 
 rem Read the Git for Windows installation path from the Registry.
 for %%k in (HKCU HKLM) do (
@@ -9,21 +11,17 @@ for %%k in (HKCU HKLM) do (
         for /f "skip=2 delims=: tokens=1*" %%a in ('reg query "%%k\SOFTWARE%%wMicrosoft\Windows\CurrentVersion\Uninstall\Git_is1" /v InstallLocation 2^> nul') do (
             for /f "tokens=3" %%z in ("%%a") do (
                 set GIT=%%z:%%b
-                rem echo Found Git at "!GIT!".
-                rem goto FOUND
+                rem echo Found Git at "!GIT!".                
             )
         )
     )
 )
 
-set sh_exe_path=%GIT%%sh_exe%
+set sh_exe_path=%GIT%
+set sh_exe_path=%sh_exe_path%%sh_exe%
 set sh_exe_path=^"%sh_exe_path%^"
-set %sh_exe_path%=%sh
-rem set sh_exe_path=%sh_exe_path: "="%
-echo %sh_exe_path%
+rem echo %sh_exe_path%
 
-
-set script_file_name=\bash_script.sh
 
 REM get current path
 set dirVar=%cd%
@@ -58,8 +56,11 @@ set unix_path=%unix_path: =\ %
 
 echo %unix_path%
 
-rem %sh_exe_path% --login -i -c %unix_path%
+%sh_exe_path% --login -i -c %unix_path%
 pause
+
+rem :NOT_FOUND
+rem 	echo GIT is probably not installed on your machine !!
 
 :Trim
 	SetLocal EnableDelayedExpansion

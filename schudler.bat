@@ -15,5 +15,5 @@ rem echo %script_path%
 rem pause
 
 rem SchTasks /Create /SC DAILY /TN “git_task” /TR %script_path% /ST 09:44 
-SCHTASKS /Create /SC weekly /D MON,TUE,WED,THU,FRI /ST 11:46 /TN git_test /TR %script_path% /V1
+SCHTASKS /Create /SC weekly /D MON,TUE,WED,THU,FRI /ST 11:46 /TN Git_auto /TR %script_path% /V1
 pause
